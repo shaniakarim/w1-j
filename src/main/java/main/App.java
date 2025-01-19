@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Hedgehog hedgehog = new Hedgehog(); // Default hedgehog
+        Hedgehog hedgehog = new Hedgehog();
 
         while (true) {
             System.out.println("\n--- Hedgehog Menu ---");
@@ -16,25 +16,25 @@ public class App {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
-            if (choice == 1) { // Create a new hedgehog
+            if (choice == 1) {
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
                 System.out.print("Enter age: ");
                 int age = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character
+                scanner.nextLine();
                 hedgehog = new Hedgehog(name, age);
                 System.out.println("New hedgehog created: " + hedgehog.name + ", Age: " + hedgehog.age);
-            } else if (choice == 2) { // Make the hedgehog speak
+            } else if (choice == 2) {
                 System.out.print("What should the hedgehog say? ");
                 String message = scanner.nextLine();
                 hedgehog.speak(message);
-            } else if (choice == 3) { // Make the hedgehog run
+            } else if (choice == 3) {
                 System.out.print("How many laps? ");
                 int laps = scanner.nextInt();
                 hedgehog.run(laps);
-            } else if (choice == 4) { // Exit
+            } else if (choice == 4) {
                 System.out.println("Goodbye!");
                 break;
             } else {
